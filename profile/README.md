@@ -1,4 +1,4 @@
-# Zeyphr
+# Zephyr Queuing
 
 Zephyr referes to a larger queueing system which has the following properties:
 - Multiple queues are used to encode different service levels
