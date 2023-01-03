@@ -1,9 +1,9 @@
 # Zeyphr
 
-Zephyr referes to a larger queueing system which models the following properties:
+Zephyr referes to a larger queueing system which has the following properties:
 - Multiple queues are used to encode different service levels
-- Polling from the system is effectively "batch" based where a modular distribution model is used to encode the way in which the batch is broken up (i.e. how much from each queuing level)
-- Queing in the system is asynchrnous such that batches can be "leased" by a worker in a non-blocking fashion such that individual workers do not block each other as much as possible
+- Polling from the system is "batched" using a modular distribution model which encodes how the batch is broken up (i.e. how much from each queuing level)
+- Queing in the system is asynchrnous such that batches can be "leased" by a worker in a non-blocking fashion where workers do not block each other
 
 The distribution model we are evaluating applies a fast and effective weight rebalancing algorithm based on queuing input to the system. Weights are then rebalanced modestly to best maintain system stability and better keep SLAs for the different service levels. The algorithm allows the system to mitigate workload allocation inefficiency caused by unusual traffic patterns.
 
